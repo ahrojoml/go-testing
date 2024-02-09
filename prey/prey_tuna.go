@@ -9,7 +9,7 @@ import (
 func CreateTuna() Prey {
 	// default config
 	// -> max speed: 252 m/s
-	speed := rand.Float64() * 252.0 + 15.0
+	speed := rand.Float64()*252.0 + 15.0
 	// -> position: random
 	position := &positioner.Position{
 		X: rand.Float64() * 500,
@@ -18,7 +18,14 @@ func CreateTuna() Prey {
 	}
 
 	return &Tuna{
-		speed: speed,
+		speed:    speed,
+		position: position,
+	}
+}
+
+func NewTuna(speed float64, position *positioner.Position) Prey {
+	return &Tuna{
+		speed:    speed,
 		position: position,
 	}
 }
