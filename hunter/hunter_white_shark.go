@@ -17,7 +17,7 @@ func init() {
 func CreateWhiteShark(simulator simulator.CatchSimulator) (h Hunter) {
 	// default config
 	// -> speed: 144 m/s
-	speed := rand.Float64() * 144.0 + 15.0
+	speed := rand.Float64()*144.0 + 15.0
 	// -> position: random
 	position := &positioner.Position{
 		X: rand.Float64() * 500,

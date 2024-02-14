@@ -9,7 +9,7 @@ func NewPositionerDefault() (positioner *PositionerDefault) {
 }
 
 // PositionerDefault is a struct that represents a default positioner
-type PositionerDefault struct {}
+type PositionerDefault struct{}
 
 // GetLinearDistance returns the linear distance between 2 positions (in meters)
 func (p *PositionerDefault) GetLinearDistance(from, to *Position) (linearDistance float64) {

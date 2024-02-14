@@ -65,7 +65,7 @@ func TestWhiteSharkHunt(t *testing.T) {
 }
 
 func TestWhiteSharkHunt_NilTuna(t *testing.T) {
-	t.Run(fmt.Sprintf("tuna is nil"), func(t *testing.T) {
+	t.Run("tuna is nil", func(t *testing.T) {
 		shark := hunt.NewWhiteShark(true, false, 10)
 
 		err := shark.Hunt(nil)
